@@ -1,0 +1,11 @@
+.status_bar{
+    font-family: 'LINESeedKR-Bd';
+    width: 80%;
+    height: 110px;
+    line-height: 120px;
+    font-size: 48pt;
+    color: red;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(0, 126, 255, 0) 0%, rgba(0, 126, 255, 1) 50%, rgba(0, 126, 255, 0) 100%);
+    margin: auto;
+}

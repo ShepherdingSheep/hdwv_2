@@ -1,0 +1,158 @@
+#dice{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+}
+
+.dice_face{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    text-align: center;
+    line-height: 290px;
+    font-size: 70pt;
+    background-image: url('../../../public/the_dice/box_new.png');
+    background-size: cover;
+    animation: herelight 6s linear infinite;
+}
+
+.dice_face > img{
+    width: 200px;
+    height: 200px;
+}
+
+.result_0{
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+}
+
+.result_1{
+    transform: rotateX(90deg) rotateY(180deg) rotateZ(0deg);
+}
+
+.result_2{
+    transform: rotateX(270deg) rotateY(270deg) rotateZ(270deg);
+}
+
+.result_3{
+    transform: rotateY(90deg);
+}
+
+.result_4{
+    transform: rotateX(270deg);
+}
+
+.result_5{
+    animation: fake 3s linear 1;
+    transform: rotateY(180deg);
+}
+
+.start{
+    animation: rotates 4s linear infinite;
+}
+
+.reroll {
+    animation: rotates 1s linear infinite;
+}
+
+#dice_0{
+    transform: translateZ(100px) perspective(300px);
+}
+.dice_d>#dice_0{
+    transform: translateZ(50px) perspective(100px);
+}
+#dice_1{
+    transform: translateY(100px) rotateX(90deg) rotateY(180deg) perspective(300px);
+}
+.dice_d>#dice_1{
+    transform: translateY(50px) rotateX(90deg) rotateY(180deg) perspective(100px);
+}
+#dice_2{
+    transform: translateX(100px) rotateY(90deg) perspective(300px);
+}
+.dice_d>#dice_2{
+    transform: translateX(50px) rotateY(90deg) perspective(100px);
+}
+#dice_3{
+    transform: translateX(-100px) rotateY(-90deg) perspective(300px);
+}
+.dice_d>#dice_3{
+    transform: translateX(-50px) rotateY(-90deg) perspective(100px);
+}
+#dice_4{
+    transform: translateY(-100px) rotateX(90deg) perspective(300px);
+}
+.dice_d>#dice_4{
+    transform: translateY(-50px) rotateX(90deg) perspective(100px);
+}
+#dice_5{
+    transform: translateZ(-100px) rotateY(180deg) perspective(300px);
+}
+.dice_d>#dice_5{
+    transform: translateZ(-50px) rotateY(180deg) perspective(100px);
+}
+
+@keyframes herelight {
+    0% {
+        background-color: #164e67;
+    }
+    10% {
+        background-color: #769d30;
+    }
+    20% {
+        background-color: #c8d71a;
+    }
+    30% {
+        background-color: #da3838;
+    }
+    40% {
+        background-color: #f09c3b;
+    }
+    50% {
+        background-color: #faed2f;
+    }
+    60% {
+        background-color: #8a2b7c;
+    }
+    70% {
+        background-color: #ec4040;
+    }
+    80% {
+        background-color: #faed2f;
+    }
+    90% {
+        background-color: #769d30;
+    }
+    100% {
+        background-color: #164e67;
+    }
+}
+
+@keyframes rotates{
+    0%{
+        transform: rotateX(0) rotateZ(0);
+    }
+    50%{
+        transform: rotateX(360deg) rotateZ(180deg);
+    }
+    100%{
+        transform: rotateX(720deg) rotateZ(360deg);
+    }
+}
+
+@keyframes fake {
+    0%, 33% {
+        transform: rotateY(0deg);
+    }
+    34%{
+        transform: rotateY(0deg);
+    }
+    43%{
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}

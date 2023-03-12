@@ -1,0 +1,22 @@
+.dicestat_table{
+    width: 95%;
+    height: 45%;
+    text-align: center;
+    margin: auto;
+    font-size: 15pt;
+}
+
+.dicestat_table > tbody > tr > td, .dicestat_table > tbody > tr > th{
+    width: calc(100% / 6);
+    outline: 1px solid white;
+}
+
+#dice_index0{
+    color: red;
+    font-weight: 800;
+}
+
+#dice_index1{
+    color: gold;
+    font-weight: 800;
+}

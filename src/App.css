@@ -1,5 +1,36 @@
+@font-face {
+  font-family: 'LINESeedKR-Bd';
+  src: url('../public/Webfont/WOFF2/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LINESeedKR-Rg';
+  src: url('../public/Webfont/WOFF2/LINESeedKR-Rg.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+  overflow: hidden;
+  font-family: 'LINESeedKR-Rg';
+}
+
 .App {
   text-align: center;
+  min-width: 1280px;
+  min-height: 720px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background: black;
+  color: white;
+}
+
+.App.Hidden{
+  background: transparent;
+  color: black;
 }
 
 .App-logo {

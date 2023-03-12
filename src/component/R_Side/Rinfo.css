@@ -1,0 +1,57 @@
+.right_information_messagebox{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background-image: url('../../../public/background/infoarea_small.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.messagebox_trailer{
+    display: flex;
+    position: relative;
+    height: 100%;
+    animation: trailer 60s infinite;
+    justify-content: center;
+    align-items: center;
+}
+
+.messagebox_msg{
+    display: inline-block;
+}
+
+.msg_title{
+    font-size: 12pt;
+    font-weight: 800;
+    margin: 0.5em auto;
+}
+
+.msg_desc{
+    font-size: 11pt;
+    margin: 1em;
+}
+
+@keyframes trailer{
+    0%, 16%{
+        left: 0;
+    }
+    17%, 32%{
+        left: -100%;
+    }
+    33%, 49%{
+        left: -200%;
+    }
+    50%, 66%{
+        left: -300%;
+    }
+    67%, 82%{
+        left: -400%;
+    }
+    83%, 99%{
+        left: -500%;
+    }
+    100%{
+        left: 0%;
+    }
+}

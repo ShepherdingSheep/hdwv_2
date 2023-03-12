@@ -1,0 +1,45 @@
+.dicestat_meter{
+    margin-top: 0.2em;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+}
+
+.meter_float{
+    width: 25%;
+}
+.float_title{
+    margin: 0;
+    font-size: 8pt;
+}
+.float_desc{
+    margin: 0;
+    font-size: 30pt;
+}
+
+.meter_graph{
+    display: inline-block;
+    width: 75%;
+    height: 100%;
+}
+
+.graph_img{
+    width: 99%;
+    height: 50%;
+    background: url(../../../public/dice_meter/dice_graph.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.graph_rail{
+    width: 99%;
+    height: 50%;
+}
+
+.graph_direction{
+    position: relative;
+    left: 0%;
+    font-size: 20pt;
+}

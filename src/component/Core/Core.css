@@ -1,0 +1,27 @@
+article.core{
+    width: calc(100%/3);
+    min-height: 720px;
+}
+
+.core_status{
+    height: 15%;
+    padding-top: 5%;
+}
+
+.core_dice, .core_dicelist{
+    height: 50%;
+    min-height: 367.5px;
+}
+
+.core_dice:hover{
+    background: radial-gradient(orange 0%, rgba(255, 136, 0, 0.5) 15%, rgba(0,0,0,0) 70%)
+}
+
+.core_dice:active{
+    background: radial-gradient(red 0%, rgba(255, 0, 0, 0.5) 15%, rgba(0,0,0,0) 70%)
+}
+
+.core_button{
+    height: 30%;
+    padding: 5%;
+}

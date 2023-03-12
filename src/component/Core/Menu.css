@@ -1,0 +1,23 @@
+.button_menubar{
+    height: 150px;
+    border-radius: 15px;
+    outline: 5px inset gray;
+    background: dimgray;
+}
+
+.menubar_title{
+    font-size: 25pt;
+    font-family: 'LINESeedKR-Bd'
+}
+
+.buttoncol{
+    text-align: center;
+    font-family: 'LINESeedKR-Rg'
+}
+
+.buttoncol > img{
+    display: block;
+    position: relative;
+    height: 70px;
+    margin: auto;
+}

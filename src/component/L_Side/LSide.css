@@ -1,0 +1,22 @@
+header.side_left{
+    width: calc(100%/3);
+    min-height: 720px;
+}
+
+.side_left_chat{
+    height: 45%;
+}
+
+.side_left_dicestat{
+    height: 20%;
+    padding: 2%;
+}
+
+.side_left_logo{
+    height: 35%;
+}
+
+.side_left_logo > img{
+    height: 80%;
+    padding: 5%;
+}

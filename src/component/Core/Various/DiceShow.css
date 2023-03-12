@@ -1,0 +1,28 @@
+.diceshow{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.diceshow_img{
+    display: inline-block;
+    width: 40%;
+    height: 100%;
+}
+
+.diceshow_img > img {
+    position: relative; 
+    top: 0; 
+    left: 0; 
+    height: 100%;
+}
+
+.diceshow_desc{
+    display: inline-block;
+    width: 60%;
+}
+
+.diceshow_name{
+    font-size: 20pt;
+    margin: 0.5em;
+}
