@@ -9,7 +9,7 @@ const DiceMeter = (props) => {
     const result_4 = props.ResultArray[5];
     const dicemeter = Math.round((1*result_1+2*result_2+3*result_3+4*result_4-1*result_m1)/(result_m1+result_1+result_2+result_3+result_4)*100)/100;
 
-    const directionposition = dicemeter*25+25 <= 50 ? Math.floor((dicemeter*25)/2)-38.5 : Math.floor(dicemeter*25)-50;
+    const directionposition = dicemeter*25+25 <= 50 ? Math.floor((dicemeter*25)/2)-37.5 : Math.floor(dicemeter*25)-50;
     let directioncss = {
         left: directionposition+'%'
     }
