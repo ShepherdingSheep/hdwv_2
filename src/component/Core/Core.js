@@ -83,7 +83,7 @@ const Core = () => {
             lotto = Math.floor(Math.random()*5);
             setResult(lotto);
         }
-        if(context.state.various === 'even' || context.state.various === 'golden' || context.state.various === 'magic'){
+        if(context.state.various === 'golden' || context.state.various === 'magic'){
             lotto = Math.floor(Math.random()*4);
             setVResult(lotto);
         }else if(context.state.various !== false){

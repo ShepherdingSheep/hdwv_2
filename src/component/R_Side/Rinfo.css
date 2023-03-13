@@ -22,14 +22,15 @@
 }
 
 .msg_title{
-    font-size: 12pt;
-    font-weight: 800;
+    font-size: 14pt;
+    font-weight: 700;
     margin: 0.5em auto;
+    line-height: 20px;
 }
 
 .msg_desc{
-    font-size: 11pt;
-    margin: 1em;
+    font-size: 13pt;
+    margin: 0.5em;
 }
 
 @keyframes trailer{

@@ -12,9 +12,9 @@
         "id": 1,
         "name": "even",
         "kr_name": "짝수 주사위",
-        "number": [-2, 2, 2, 4],
-        "number_files": ["./the_dice/num_backdouble.png", "./the_dice/num_2.png", "./the_dice/num_2.png", "./the_dice/num_4.png"],
-        "files": ["./the_dice/num_backdouble.png", "./the_dice/num_2.png", "./the_dice/num_2.png", "./the_dice/num_4.png", "./the_dice/num_4.png", "./the_dice/num_backdouble.png"],
+        "number": [-2, 0, 2, 2, 4],
+        "number_files": ["./the_dice/num_backdouble.png", "./the_dice/num_zero.png", "./the_dice/num_2.png", "./the_dice/num_2.png", "./the_dice/num_4.png"],
+        "files": ["./the_dice/num_backdouble.png", "./the_dice/num_zero.png", "./the_dice/num_2.png", "./the_dice/num_2.png", "./the_dice/num_4.png", "./the_dice/num_backdouble.png"],
         "preview": "./the_dice/multi_dice/dice_image/even_dice.png"
     },
     {
