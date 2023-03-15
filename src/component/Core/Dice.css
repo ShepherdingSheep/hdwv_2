@@ -19,6 +19,10 @@
     animation: herelight 6s linear infinite;
 }
 
+.reroll > .dice_face{
+    animation: herelight 0.5s linear infinite;
+}
+
 .dice_face > img{
     width: 200px;
     height: 200px;
@@ -96,37 +100,34 @@
 
 @keyframes herelight {
     0% {
-        background-color: #164e67;
+        background-color: red;
     }
-    10% {
-        background-color: #769d30;
+    11% {
+        background-color: orange;
     }
-    20% {
-        background-color: #c8d71a;
+    22% {
+        background-color: yellow;
     }
-    30% {
-        background-color: #da3838;
+    33% {
+        background-color: green;
     }
-    40% {
-        background-color: #f09c3b;
+    44% {
+        background-color: aqua;
     }
-    50% {
-        background-color: #faed2f;
+    55% {
+        background-color: blue;
     }
-    60% {
-        background-color: #8a2b7c;
+    66% {
+        background-color: navy;
     }
-    70% {
-        background-color: #ec4040;
+    77% {
+        background-color: purple;
     }
-    80% {
-        background-color: #faed2f;
-    }
-    90% {
-        background-color: #769d30;
+    88% {
+        background-color: pink;
     }
     100% {
-        background-color: #164e67;
+        background-color: red;
     }
 }
 

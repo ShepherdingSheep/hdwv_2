@@ -72,17 +72,17 @@
 }
 
 @keyframes odddice{
-    0%{
+    0%, 20%{
         background-color: aquamarine;
     }
-    25%{
+    25%, 45%{
         background-color: dodgerblue;
     }
-    50%{
-        background-color: navy;
+    50%, 70%{
+        background-color: aquamarine;
     }
-    75%{
-        background-color: darkcyan;
+    75%, 95%{
+        background-color: dodgerblue;
     }
     100%{
         background-color: aquamarine;
@@ -100,17 +100,17 @@
 }
 
 @keyframes evendice{
-    0%{
+    0%, 20%{
         background-color: hotpink;
     }
-    25%{
+    25%, 45%{
         background-color: coral;
     }
-    50%{
-        background-color: red;
+    50%, 70%{
+        background-color: hotpink;
     }
-    75%{
-        background-color: darkred;
+    75%, 95%{
+        background-color: coral;
     }
     100%{
         background-color: hotpink;
@@ -123,7 +123,7 @@
 
 #dice.magic > div{
     background-image: url('../../../../public/the_dice/multi_dice/dice_back/back_daruma.png');
-    animation: darumadice 4s linear infinite;
+    animation: darumadice 2s linear infinite;
 }
 
 #dice.magic.reroll > div{
@@ -155,12 +155,12 @@
 
 #dice.slow > div{
     background-image: url('../../../../public/the_dice/multi_dice/dice_back/back_slow.png');
-    animation: slowdice 4s alternate infinite;
+    animation: slowdice 2s alternate infinite;
 }
 
 #dice.slow.reroll > div{
     background-image: url('../../../../public/the_dice/multi_dice/dice_back/back_slow.png');
-    animation: slowdice 0.4s alternate infinite;
+    animation: slowdice 0.3s alternate infinite;
 }
 
 @keyframes slowdice{
@@ -207,7 +207,7 @@
 
 #dice.joker > div{
     background-image: url('../../../../public/the_dice/multi_dice/dice_back/back_joker.png');
-    animation: jokerdice 4s linear infinite;
+    animation: jokerdice 2s linear infinite;
 }
 
 #dice.joker.reroll > div{

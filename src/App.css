@@ -21,7 +21,7 @@
 
 body{
   overflow: hidden;
-  font-family: 'LINESeedKR-Rg';
+  font-family: 'LINESeedKR-Rg', 'Cafe24Ssurround', sans-serif;
 }
 
 .App {
