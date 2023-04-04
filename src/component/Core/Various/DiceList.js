@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { ModeContext } from '../../../App';
 import { ListContext } from '../Core';
 import dicedata from './dicearray.json';
+import * as math from 'mathjs';
 import './DiceList.css'
 
 const DiceList = () => {
@@ -10,7 +11,7 @@ const DiceList = () => {
 
     const diceSelect = (id) => {
         if(id === 10){
-            id = Math.floor(Math.random()*10);
+            id = math.randomInt(0, 10);
         }
         context.actions.setVarious(dicedata.dice[id].name);
     }

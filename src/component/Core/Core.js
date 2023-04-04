@@ -6,6 +6,7 @@ import DoubleDice from './DoubleDice'
 import Menu from './Menu'
 import DiceList from './Various/DiceList'
 import DiceShow from './Various/DiceShow'
+import * as math from 'mathjs';
 import { ModeContext } from '../../App';
 
 export const ListContext = createContext({
@@ -60,6 +61,7 @@ const Core = () => {
     const [doubleResult, setDoubleResult] = useState('?');
     const [variousResult, setVResult] = useState('?');
     const [diceLog, setLog] = useState([]);
+    const [m1confirm, setConfirm] = useState(true);
     const [playing_a, toggle_a] = useAudio('./audio/rolling.wav');
     const [playing_b, toggle_b] = useAudio('./audio/rolling_done.wav');
     const [playing_c, toggle_c] = useAudio('./audio/bonk.mp3');
@@ -68,30 +70,31 @@ const Core = () => {
     const roll = (e) => {
         toggle_a();
         let lotto;
-        const nugul = Math.floor(Math.random()*2);
+        const nugul = math.pickRandom([true, false]);
         e.preventDefault();
         setRoll(true);
-        do{lotto = Math.floor(Math.random()*5);}while(lotto === diceLog[diceLog.length-1]);
-        if(lotto === 0 && nugul === 1){lotto = 5};
+        setConfirm(false);
+        do{lotto = math.randomInt(0, 5);}while(lotto === diceLog[diceLog.length-1]);
+        if(lotto === 0 && nugul === true){lotto = 5};
         if(context.state.start || context.state.various === 'shield'){
             context.actions.setStart(false);
-            lotto = Math.floor(Math.random()*4)+1
+            lotto = math.randomInt(1, 5);
         }
         if(context.state.double){
-            lotto = Math.floor(Math.random()*5);
+            lotto = math.randomInt(0, 5);
             setDoubleResult(lotto);
-            lotto = Math.floor(Math.random()*5);
+            lotto = math.randomInt(0, 5);
             setResult(lotto);
         }
         if(context.state.various === 'golden' || context.state.various === 'magic'){
-            lotto = Math.floor(Math.random()*4);
+            lotto = math.randomInt(0, 4);
             setVResult(lotto);
         }else if(context.state.various !== false){
-            lotto = Math.floor(Math.random()*5);
+            lotto = math.randomInt(0, 5);
             setVResult(lotto);
         }
         if(context.state.double === false && context.state.various === false){
-            setResult(Math.floor(lotto));
+            setResult(lotto);
             setLog([...diceLog, lotto]);
             context.actions.setResult(lotto);
         }
@@ -99,9 +102,9 @@ const Core = () => {
 
     useEffect(() => {
         if(isRoll === true){
-            setTimeout(() => {context.actions.setResult(-1);setRoll(false);toggle_b();}, 2000);
+            setTimeout(() => {if(context.state.result !== 5){context.actions.setResult(-1);setConfirm(true);}setRoll(false);toggle_b();}, 2000);
             if(context.state.result === 5){
-                setTimeout(() => {toggle_c();}, 3000);
+                setTimeout(() => {context.actions.setResult(-1); toggle_c(); setConfirm(true);}, 3000);
             }
         }
     }, [isRoll, context.actions, toggle_b, toggle_c, context.state]);
@@ -110,7 +113,7 @@ const Core = () => {
         return(
             <article className='core'>
                 <div className='core_status'>
-                    {context.state.various !== false ? <DiceNoon result={variousResult} doubleresult={doubleResult} delayed={isRoll} various={context.state.various} double={context.state.double} /> : <DiceNoon result={diceResult} doubleresult={doubleResult} delayed={isRoll} various={context.state.various} double={context.state.double} />}
+                    {context.state.various !== false ? <DiceNoon result={variousResult} doubleresult={doubleResult} delayed={isRoll} m1delayed={m1confirm} various={context.state.various} double={context.state.double} /> : <DiceNoon result={diceResult} doubleresult={doubleResult} delayed={isRoll} m1delayed={m1confirm} various={context.state.various} double={context.state.double} />}
                 </div>
                 <div className='core_dice' onClick={isRoll ? undefined : roll}>
                     {context.state.start ? <Dice rolling={isRoll} result={diceResult}/> : context.state.double ? <DoubleDice rolling={isRoll} result_one={diceResult} result_two={doubleResult}/> : context.state.various !== false ? <Dice rolling={isRoll} various={context.state.various} result={variousResult} /> : <Dice rolling={isRoll} result={diceResult} />}

@@ -9,7 +9,7 @@ const DiceNoon = (props) => {
     const [double_number, setDNumber] = useState('?')
 
     useEffect(() => {
-        setSign(props.delayed ? '?' : props.result === 0 ? -1 : props.result === 5 ? '+1' : props.result);
+        setSign(props.delayed ? '?' : props.result === 0 ? -1 : props.result === 5 && props.m1delayed === false ? '-1' : props.result === 5 && props.m1delayed === true ? '+1' : props.result);
         if(props.various !== false){
             switch(props.various){
                 case 'odd':
@@ -52,7 +52,7 @@ const DiceNoon = (props) => {
         if(props.double){
             setDNumber(props.delayed ? '?' : props.doubleresult === props.result ? '더블' : props.doubleresult === 0 ? -1 : props.doubleresult)
         };
-    }, [props.delayed, props.result, props.double, props.doubleresult, props.various, sign_number, id, sign_text])
+    }, [props.delayed, props.result, props.double, props.doubleresult, props.various, sign_number, id, sign_text, props.m1delayed])
 
     if(props.double){
         return (

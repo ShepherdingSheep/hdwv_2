@@ -10,7 +10,6 @@ div.dicelist{
 div.dice_item{
     width: 100px;
     height: 100px;
-    outline: 1px gray ridge;
     border-collapse: collapse;
 }
 
