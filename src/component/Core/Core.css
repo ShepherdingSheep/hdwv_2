@@ -47,3 +47,7 @@ article.core{
     padding: 2%;
     color: white;
 }
+
+.hidden_meter{
+    visibility: hidden;
+}

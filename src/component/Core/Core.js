@@ -180,6 +180,9 @@ const Core = () => {
                 <div className='core_button'>
                     <Menu />
                 </div>
+                <div className='hidden_meter'>
+                    <DiceMeter ResultArray={[ResultBack.current, ResultNugul.current, ResultOne.current, ResultTwo.current, ResultThree.current, ResultFour.current]} upMeter={meterUpdateHandler} />
+                </div>
             </article>
         );
     } else {

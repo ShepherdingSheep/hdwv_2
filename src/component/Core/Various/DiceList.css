@@ -11,6 +11,7 @@ div.dice_item{
     width: 100px;
     height: 100px;
     border-collapse: collapse;
+    cursor: pointer;
 }
 
 div.dice_item:hover{
