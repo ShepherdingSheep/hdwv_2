@@ -1,11 +1,9 @@
 import './App.css';
-import LSide from './component/L_Side/LSide';
 import Core from './component/Core/Core';
-import RSide from './component/R_Side/RSide';
 import { createContext, useState } from 'react';
 
 export const ModeContext = createContext({
-  state : {double: false, start: true, various: false, visible: true, result: '?'},
+  state : {double: false, start: true, various: false, visible: false, result: '?'},
   actions : {
     setDouble: () => {},
     setStart: () => {},
@@ -39,9 +37,7 @@ const App = () => {
   return (
     <ModeManager>
       <div className="App">
-        <LSide />
         <Core />
-        <RSide />
       </div>
     </ModeManager>
   );

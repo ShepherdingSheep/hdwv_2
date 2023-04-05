@@ -22,12 +22,19 @@ const Dicestat = (props) => {
     }
     
     return(
-        <table className='dicestat_table'>
-            <tbody>
-                <tr>{index_render()}</tr>
-                <tr>{stat_render()}</tr>
-            </tbody>
-        </table>
+        <article>
+            <div className='dicestat_hollow'>
+            </div>
+            <div className='dicestat_title'>
+                오늘의 주사위는 누구 편이었는가?
+            </div>
+            <table className='dicestat_table'>
+                <tbody>
+                    <tr>{index_render()}</tr>
+                    <tr>{stat_render()}</tr>
+                </tbody>
+            </table>
+        </article>
     );
 }
 

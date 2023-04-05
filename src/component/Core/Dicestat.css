@@ -4,11 +4,22 @@
     text-align: center;
     margin: auto;
     font-size: 15pt;
+    margin-top: 5%;
+}
+
+.dicestat_title{
+    margin: auto;
+    width: 90%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20pt;
+    font-weight: 800;
+    background-image: linear-gradient(135deg, crimson 0%, yellow 50%, aqua 100%);
 }
 
 .dicestat_table > tbody > tr > td, .dicestat_table > tbody > tr > th{
     width: calc(100% / 6);
-    outline: 2px solid white;
+    outline: 2px solid black;
 }
 
 #dice_index0{
@@ -17,6 +28,6 @@
 }
 
 #dice_index1{
-    color: gold;
+    color: darkgoldenrod;
     font-weight: 800;
 }

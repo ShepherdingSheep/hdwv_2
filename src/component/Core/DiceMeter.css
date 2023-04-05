@@ -1,6 +1,6 @@
 .dicestat_meter{
-    margin-top: 0.2em;
-    height: 45%;
+    margin-top: 2em;
+    height: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,4 +42,27 @@
     position: relative;
     left: 0%;
     font-size: 20pt;
+}
+
+.meter_result{
+    display: block;
+
+}
+
+.result_title{
+    margin-top: 20px;
+    font-size: 20pt;
+}
+
+.result_desc{
+    width: 100%;
+    font-size: 30pt;
+}
+
+.red_desc{
+    color: red;
+}
+
+.blue_desc{
+    color: blue;
 }

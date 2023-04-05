@@ -10,6 +10,7 @@ const ButtonDouble = () => {
         context.actions.setDouble(isDouble ? false : true);
         context.actions.setStart(false);
         context.actions.setVarious(false);
+        context.actions.setVisible(false);
     }
 
     return(
@@ -28,6 +29,7 @@ const ButtonRefresh = () => {
         context.actions.setDouble(false);
         context.actions.setStart(true);
         context.actions.setVarious(false);
+        context.actions.setVisible(false);
     }
 
     return(
@@ -45,12 +47,28 @@ const ButtonVarious = () => {
         context.actions.setDouble(false);
         context.actions.setStart(false);
         context.actions.setVarious(context.state.various === true ? false : true);
+        context.actions.setVisible(false);
     }
 
     return(
         <button className='buttoncol' onClick={() => action()}>
             <img src='./button/browse_dice.png' alt='황금열쇠'></img>
             특수 주사위
+        </button>
+    );
+}
+
+const ButtonFold = () => {
+    const context = useContext(ModeContext);
+
+    const action = () => {
+        context.actions.setVisible(context.state.visible === true ? false : true);
+    }
+
+    return(
+        <button className='buttoncol' onClick={() => action()}>
+            <img src='./button/probablity.png' alt='현황'></img>
+            주사위 현황
         </button>
     );
 }
@@ -73,7 +91,7 @@ const Menu = () => {
                 <ButtonDouble/>
                 <ButtonRefresh />
                 <ButtonVarious />
-                {/* <ButtonFold /> */}
+                <ButtonFold />
             </div>
         </div>
     );

@@ -31,8 +31,7 @@ body{
   height: 100vh;
   display: flex;
   flex-direction: row;
-  background: black;
-  color: white;
+  color: black;
   background-size: 100% 100%;
 }
 
