@@ -27,7 +27,7 @@
 
 .graph_img{
     width: 99%;
-    height: 50%;
+    height: 30px;
     background: url(../../../public/dice_meter/dice_graph.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;

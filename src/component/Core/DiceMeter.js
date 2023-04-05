@@ -14,7 +14,7 @@ const DiceMeter = (props) => {
         left: directionposition+'%'
     }
 
-    useEffect(()=>{props.upMeter(dicemeter); console.log(props.ResultArray);}, [dicemeter, props]);
+    useEffect(()=>{props.upMeter(dicemeter);}, [dicemeter, props]);
 
     return(
         <div>
