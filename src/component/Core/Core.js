@@ -117,9 +117,10 @@ const Core = () => {
         setConfirm(false);
         do{lotto = math.randomInt(0, 5);}while(lotto === diceLog[diceLog.length-1]);
         if(lotto === 0 && nugul === true){lotto = 5};
-        if(context.state.start || context.state.various === 'shield'){
+        if(context.state.start){
             context.actions.setStart(false);
             lotto = math.randomInt(1, 5);
+            setResult(lotto);
         }
         if(context.state.double){
             lotto = math.randomInt(0, 5);
@@ -127,11 +128,15 @@ const Core = () => {
             lotto = math.randomInt(0, 5);
             setResult(lotto);
         }
-        if(context.state.various === 'golden' || context.state.various === 'magic'){
+        if(context.state.various === 'golden' || context.state.various === 'magic' || context.state.various === 'dual'){
             lotto = math.randomInt(0, 4);
             setVResult(lotto);
         }else if(context.state.various !== false){
             lotto = math.randomInt(0, 5);
+            setVResult(lotto);
+        }
+        if(context.state.various === 'shield'){
+            lotto = math.randomInt(0, 4);
             setVResult(lotto);
         }
         if(context.state.double === false && context.state.various === false){

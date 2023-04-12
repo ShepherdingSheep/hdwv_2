@@ -42,6 +42,9 @@ const DiceNoon = (props) => {
                 case 'shield':
                     setId(9);
                     break;
+                case 'dual':
+                    setId(10);
+                    break;
                 default:
                     setId(0);
                     break;

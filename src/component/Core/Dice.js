@@ -28,6 +28,8 @@ const Dice = (props) => {
                 return 8;
             case 'shield':
                 return 9;
+            case 'dual':
+                return 10;
             default:
                 return 0;
         }

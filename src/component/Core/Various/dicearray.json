@@ -91,6 +91,15 @@
     },
     {
         "id": 10,
+        "name": "dual",
+        "kr_name": "막고라 주사위",
+        "number": ["디맥", "투온", "식스타", "아르케아"],
+        "number_files": ["./the_dice/multi_dice/dice_number/dual_djmax.png", "./the_dice/multi_dice/dice_number/dual_ez2on.png", "./the_dice/multi_dice/dice_number/dual_sixtar.png", "./the_dice/multi_dice/dice_number/dual_arcaea.png"],
+        "files": ["./the_dice/multi_dice/dice_number/dual_djmax.png", "./the_dice/multi_dice/dice_number/dual_ez2on.png", "./the_dice/multi_dice/dice_number/dual_sixtar.png", "./the_dice/multi_dice/dice_number/dual_arcaea.png", "./the_dice/multi_dice/dice_number/dual_djmax.png", "./the_dice/multi_dice/dice_number/dual_ez2on.png"],
+        "preview": "./the_dice/multi_dice/dice_image/dual_dice.png"
+    },
+    {
+        "id": 11,
         "name": "molu",
         "kr_name": "몰?루 주사위",
         "number": [0, 0, 0, 0, 0],

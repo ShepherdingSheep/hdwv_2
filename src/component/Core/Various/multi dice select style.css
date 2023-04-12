@@ -239,20 +239,26 @@
 
 #dice.shield > div{
     background-image: url('../../../../public/the_dice/multi_dice/dice_back/back_emergency.png');
-    animation: shielddice 2s linear infinite;
+    animation: shielddice 0.5s linear infinite;
 }
 
 #dice.shield.reroll > div{
     background-image: url('../../../../public/the_dice/multi_dice/dice_back/back_emergency.png');
-    animation: shielddice 0.3s linear infinite;
+    animation: shielddice 0.2s linear infinite;
 }
 
 @keyframes shielddice{
-    0%{
+    0%, 47%{
         background-color: red;
     }
-    50%{
+    47%, 50%{
+        background-color: black;
+    }
+    50%, 97%{
         background-color: blue;
+    }
+    97%, 100%{
+        background-color: black;
     }
     100%{
         background-color: red;
@@ -261,6 +267,15 @@
 
 #dice.edge > div{
     background-image: url('../../../../public/the_dice/multi_dice/dice_back/back_edge.png');
+}
+
+#dice.dual > div{
+    background-image: url('../../../../public/the_dice/multi_dice/dice_back/back_dual.png');
+    animation: shielddice 2s linear infinite;
+}
+
+#dice.dual.reroll > div{
+    animation: shielddice 0.5s linear infinite;
 }
 
 .dice_select_row > div{

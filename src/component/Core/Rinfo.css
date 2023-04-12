@@ -22,14 +22,14 @@
 }
 
 .msg_title{
-    font-size: 13pt;
+    font-size: 18pt;
     font-weight: 700;
     margin: 0.5em auto;
     line-height: 20px;
 }
 
 .msg_desc{
-    font-size: 12pt;
+    font-size: 16pt;
     margin: 0.5em;
 }
 
