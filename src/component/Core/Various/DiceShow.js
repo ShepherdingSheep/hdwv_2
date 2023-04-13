@@ -17,7 +17,7 @@ const DiceShow = () => {
                 dicedata.dice[list.state.id].number_files.map((number, index) => (
                     <img key={'numberimg_'+index} className = 'dicenumber_number' src={number} alt='Number_here'></img>
                 )) :
-                dicedata.dice[10].number_files.map((number, index) => (
+                dicedata.dice[11].number_files.map((number, index) => (
                     <img key={'numberimg_'+index} className = 'dicenumber_number' src={number} alt='Number_here'></img>
                 ))}</div>
             </div>
