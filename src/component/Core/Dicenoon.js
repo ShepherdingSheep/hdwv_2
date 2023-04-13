@@ -59,7 +59,7 @@ const DiceNoon = (props) => {
 
     if(props.double){
         return (
-            <div className='status_bar'>
+            <div className={['status_bar', props.meter > 2.2 ? 'blue_status' : props.meter < 2.0 ? 'red_status' : 'yellow_status'].join(' ')}>
                 {sign_number || '?'}
                 &nbsp;&nbsp;
                 {double_number || '?'}
@@ -67,13 +67,13 @@ const DiceNoon = (props) => {
         );
     } else if(props.various !== false) {
         return (
-            <div className='status_bar'>
+            <div className={['status_bar', props.meter > 2.2 ? 'blue_status' : props.meter < 2.0 ? 'red_status' : 'yellow_status'].join(' ')}>
                 {sign_text || '??'}
             </div>
         );
     } else {
         return (
-            <div className='status_bar'>
+            <div className={['status_bar', props.meter > 2.2 ? 'blue_status' : props.meter < 2.0 ? 'red_status' : 'yellow_status'].join(' ')}>
                 {sign_number || '?'}
             </div>
         );

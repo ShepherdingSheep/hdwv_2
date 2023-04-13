@@ -176,11 +176,11 @@ const Core = () => {
                 <div className='core_messagebox'>
                     <RInfo />
                 </div>
-                <div className={['core_dice', meter >= 2.3 ? 'blue_dice' : meter <= 1.9 ? 'red_dice' : 'yellow_dice'].join(' ')} onClick={isRoll ? undefined : roll}>
+                <div className={['core_dice', meter > 2.3 ? 'blue_dice' : meter < 1.9 ? 'red_dice' : 'yellow_dice'].join(' ')} onClick={isRoll ? undefined : roll}>
                     {context.state.start ? <Dice rolling={isRoll} result={diceResult} meter={meter}/> : context.state.double ? <DoubleDice rolling={isRoll} result_one={diceResult} result_two={doubleResult}/> : context.state.various !== false ? <Dice rolling={isRoll} various={context.state.various} result={variousResult} meter={meter} /> : <Dice rolling={isRoll} result={diceResult} meter={meter} />}
                 </div>
                 <div className='core_status'>
-                    {context.state.various !== false ? <DiceNoon result={variousResult} doubleresult={doubleResult} delayed={isRoll} m1delayed={m1confirm} various={context.state.various} double={context.state.double} /> : <DiceNoon result={diceResult} doubleresult={doubleResult} delayed={isRoll} m1delayed={m1confirm} various={context.state.various} double={context.state.double} />}
+                    {context.state.various !== false ? <DiceNoon result={variousResult} doubleresult={doubleResult} delayed={isRoll} m1delayed={m1confirm} various={context.state.various} double={context.state.double} meter={meter} /> : <DiceNoon result={diceResult} doubleresult={doubleResult} delayed={isRoll} m1delayed={m1confirm} various={context.state.various} double={context.state.double} meter={meter} />}
                 </div>
                 <div className='core_button'>
                     <Menu />
