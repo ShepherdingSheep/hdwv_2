@@ -15,7 +15,8 @@ div.dice_item{
 }
 
 div.dice_item:hover{
-    background: rgb(255, 255, 255, 0.3);
+    background: url('../../../../public/the_dice/multi_dice/dice_image/dice_selected.png');
+    background-size: contain;
 }
 
 div.dice_item > img{

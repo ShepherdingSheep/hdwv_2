@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'DOSMyungjo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body{
   overflow: hidden;
   font-family: 'LINESeedKR-Rg', 'Cafe24Ssurround', sans-serif;
