@@ -5,6 +5,7 @@
     top: calc(50% - 100px);
     left: calc(50% - 100px);
     transform-style: preserve-3d;
+    user-select: none;
 }
 
 .dice_face{
