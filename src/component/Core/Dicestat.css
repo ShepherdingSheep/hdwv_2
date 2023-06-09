@@ -14,12 +14,14 @@
     line-height: 60px;
     font-size: 20pt;
     font-weight: 800;
-    background-image: linear-gradient(135deg, crimson 0%, yellow 50%, aqua 100%);
+    background-image: linear-gradient(90deg, firebrick 0%, crimson 33%, orange 35%, yellow 66%, aqua 68%, navy 100%);
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 .dicestat_table > tbody > tr > td, .dicestat_table > tbody > tr > th{
     width: calc(100% / 6);
     outline: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 #dice_index0{
@@ -30,4 +32,12 @@
 #dice_index1{
     color: darkgoldenrod;
     font-weight: 800;
+}
+
+.core_meter{
+    background-color: black;
+}
+
+.dicestat_table > tbody > tr > td {
+    background-color: rgba(255, 255, 255, 0.6);
 }

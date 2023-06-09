@@ -22,7 +22,7 @@ const Dicestat = (props) => {
     }
     
     return(
-        <article>
+        <article className='dicestat_all'>
             <div className='dicestat_hollow'>
             </div>
             <div className='dicestat_title'>
