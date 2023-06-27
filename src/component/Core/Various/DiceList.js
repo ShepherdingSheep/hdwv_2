@@ -10,8 +10,8 @@ const DiceList = () => {
     const list = useContext(ListContext);
 
     const diceSelect = (id) => {
-        if(id === 11){
-            id = math.randomInt(0, 10);
+        if(id === 8){
+            id = math.randomInt(0, 7);
         }
         context.actions.setVarious(dicedata.dice[id].name);
     }

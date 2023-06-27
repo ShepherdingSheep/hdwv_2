@@ -8,28 +8,24 @@ const Dice = (props) => {
     const context = useContext(ModeContext);
 
     const v_id = () => {switch(context.state.various){
-            case 'odd':
-                return 0;
-            case 'even':
-                return 1;
             case 'golden':
-                return 2;
-            case 'magic':
-                return 3;
+                return 0;
             case 'slow':
-                return 4;
+                return 1;
             case 'fast':
-                return 5;
+                return 2;
             case 'back':
-                return 6;
+                return 3;
             case 'joker':
-                return 7;
+                return 4;
             case 'edge':
-                return 8;
+                return 5;
             case 'shield':
-                return 9;
+                return 6;
             case 'dual':
-                return 10;
+                return 7;
+            case 'molu':
+                return 8;
             default:
                 return 0;
         }

@@ -21,6 +21,25 @@ const ButtonDouble = () => {
     );
 }
 
+const ButtonNewDouble = () => {
+    const context = useContext(ModeContext);
+    const isDouble = context.state.double;
+
+    const action = () => {
+        context.actions.setDouble(isDouble ? false : true);
+        context.actions.setStart(false);
+        context.actions.setVarious(context.state.various === 'newtype' ? false : 'newtype');
+        context.actions.setVisible(false);
+    }
+
+    return(
+        <button className='buttoncol' onClick={() => action()}>
+            <img src={context.state.double ? './button/single_dice.png' : './button/double_dice.png'} alt='뉴타입'></img>
+            {context.state.double ? '일반' : '더블(New)'} 주사위
+        </button>
+    );
+}
+
 const ButtonRefresh = () => {
     const context = useContext(ModeContext);
 
@@ -89,6 +108,7 @@ const Menu = () => {
             <div className='menubar_title'>MENU</div>
             <div className='menubar_buttonrow'>
                 <ButtonDouble/>
+                <ButtonNewDouble/>
                 <ButtonRefresh />
                 <ButtonVarious />
                 <ButtonFold />

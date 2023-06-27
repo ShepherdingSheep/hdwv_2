@@ -50,8 +50,11 @@
 }
 
 .result_5{
-    animation: fake 3s linear 1;
     transform: rotateY(180deg);
+}
+
+.ready.false.result_5{
+    animation: fake 3s linear 1;
 }
 
 .start{

@@ -10,40 +10,31 @@ const DiceNoon = (props) => {
 
     useEffect(() => {
         setSign(props.delayed ? '?' : props.result === 0 ? -1 : props.result === 5 && props.m1delayed === false ? '-1' : props.result === 5 && props.m1delayed === true ? '+1' : props.result);
-        if(props.various !== false){
+        if(props.various !== false && props.various !== 'newtype'){
             switch(props.various){
-                case 'odd':
+                case 'golden':
                     setId(0);
                     break;
-                case 'even':
+                case 'slow':
                     setId(1);
                     break;
-                case 'golden':
+                case 'fast':
                     setId(2);
                     break;
-                case 'magic':
+                case 'back':
                     setId(3);
                     break;
-                case 'slow':
+                case 'joker':
                     setId(4);
                     break;
-                case 'fast':
+                case 'edge':
                     setId(5);
                     break;
-                case 'back':
+                case 'shield':
                     setId(6);
                     break;
-                case 'joker':
-                    setId(7);
-                    break;
-                case 'edge':
-                    setId(8);
-                    break;
-                case 'shield':
-                    setId(9);
-                    break;
                 case 'dual':
-                    setId(10);
+                    setId(7);
                     break;
                 default:
                     setId(0);
@@ -52,8 +43,12 @@ const DiceNoon = (props) => {
             setSign(props.delayed ? '?' : props.result);
             setText(props.delayed ? '?' : dicedata.dice[id].number[props.result]);
         }
-        if(props.double){
-            setDNumber(props.delayed ? '?' : props.doubleresult === props.result ? '더블' : props.doubleresult === 0 ? -1 : props.doubleresult)
+        if(props.double && props.various !== 'newtype'){
+            setDNumber(props.delayed ? '?' : props.doubleresult === props.result ? '더블' : props.doubleresult === 0 ? -1 : props.doubleresult);
+        }
+        if(props.double && props.various === 'newtype'){
+            setSign(props.delayed ? '?' : props.result%3 === 0 ? '0' : props.result%3);
+            setDNumber(props.delayed ? '?' : props.doubleresult%3 === props.result%3 ? '더블' : props.doubleresult%3 === 0 ? '0' : props.doubleresult%3);
         };
     }, [props.delayed, props.result, props.double, props.doubleresult, props.various, sign_number, id, sign_text, props.m1delayed])
 
