@@ -112,17 +112,11 @@ const Core = () => {
     const roll = (e) => {
         toggle_a();
         let lotto;
-        const nugul = math.pickRandom([true, false]);
         e.preventDefault();
+        context.actions.setStart(false);
         setRoll(true);
         setConfirm(false);
-        do{lotto = math.randomInt(0, 5);}while(lotto === diceLog[diceLog.length-1]);
-        if(lotto === 0 && nugul === true){lotto = 5};
-        if(context.state.start){
-            context.actions.setStart(false);
-            lotto = math.randomInt(1, 5);
-            setResult(lotto);
-        }
+        do{lotto = math.randomInt(0, 6);}while(lotto === diceLog[diceLog.length-1]);
         if(context.state.double){
             lotto = math.randomInt(0, 6);
             setDoubleResult(lotto);
@@ -141,9 +135,9 @@ const Core = () => {
             setVResult(lotto);
         }
         if(context.state.double === false && context.state.various === false){
-            setResult(lotto);
+            setResult(lotto%3);
             setLog([...diceLog, lotto]);
-            context.actions.setResult(lotto);
+            context.actions.setResult(lotto%3);
         }
     }
 
@@ -177,7 +171,7 @@ const Core = () => {
                 <div className='core_messagebox'>
                     <RInfo />
                 </div>
-                <div className={['core_dice', meter > 2.3 ? 'blue_dice' : meter < 1.9 ? 'red_dice' : 'yellow_dice'].join(' ')} onClick={isRoll ? undefined : roll}>
+                <div className={['core_dice', meter > 2.0 ? 'blue_dice' : meter < 1.0 ? 'red_dice' : 'yellow_dice'].join(' ')} onClick={isRoll ? undefined : roll}>
                     {context.state.start ? <Dice rolling={isRoll} result={diceResult} meter={meter}/> : context.state.double ? context.state.various === 'newtype' ? <NewDoubleDice rolling={isRoll} result_one={diceResult} result_two={doubleResult}/> : <DoubleDice rolling={isRoll} result_one={diceResult} result_two={doubleResult}/> : context.state.various !== false ? <Dice rolling={isRoll} various={context.state.various} result={variousResult} meter={meter} /> : <Dice rolling={isRoll} result={diceResult} meter={meter} />}
                 </div>
                 <div className='core_status'>

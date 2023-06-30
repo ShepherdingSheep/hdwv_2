@@ -12,7 +12,7 @@
         "id": 1,
         "name": "slow",
         "kr_name": "저속 주사위",
-        "number": [-1, -1, 1, 1, 2],
+        "number": ["0", "0", 1, 1, 2],
         "number_files": ["./the_dice/num_0.png", "./the_dice/num_0.png", "./the_dice/num_1.png", "./the_dice/num_1.png", "./the_dice/num_2.png"],
         "files": ["./the_dice/num_0.png", "./the_dice/num_0.png", "./the_dice/num_1.png", "./the_dice/num_1.png", "./the_dice/num_2.png", "./the_dice/num_2.png"],
         "preview": "./the_dice/multi_dice/dice_image/slow_dice.png"
@@ -31,8 +31,8 @@
         "name": "back",
         "kr_name": "후진 주사위",
         "number": [-4, -3, -2, -1, 1],
-        "number_files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backtriple.png", "./the_dice/num_backdouble.png", "./the_dice/num_0.png", "./the_dice/num_1.png"],
-        "files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backtriple.png", "./the_dice/num_backdouble.png", "./the_dice/num_0.png", "./the_dice/num_1.png", "./the_dice/num_0.png"],
+        "number_files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backtriple.png", "./the_dice/num_backdouble.png", "./the_dice/num_zero.png", "./the_dice/num_1.png"],
+        "files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backtriple.png", "./the_dice/num_backdouble.png", "./the_dice/num_zero.png", "./the_dice/num_1.png", "./the_dice/num_zero.png"],
         "preview": "./the_dice/multi_dice/dice_image/back_dice.png"
     },
     {
@@ -40,8 +40,8 @@
         "name": "joker",
         "kr_name": "조커! 주사위",
         "number": [-4, -4, "0", 4, 4],
-        "number_files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backquaduruple.png", "./the_dice/num_zero.png", "./the_dice/num_4.png", "./the_dice/num_4.png"],
-        "files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backquaduruple.png", "./the_dice/num_zero.png", "./the_dice/num_4.png", "./the_dice/num_4.png", "./the_dice/num_backquaduruple.png"],
+        "number_files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backquaduruple.png", "./the_dice/num_0.png", "./the_dice/num_4.png", "./the_dice/num_4.png"],
+        "files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backquaduruple.png", "./the_dice/num_0.png", "./the_dice/num_4.png", "./the_dice/num_4.png", "./the_dice/num_backquaduruple.png"],
         "preview": "./the_dice/multi_dice/dice_image/joker_dice.png"
     },
     {

@@ -9,7 +9,7 @@ const DiceNoon = (props) => {
     const [double_number, setDNumber] = useState('?')
 
     useEffect(() => {
-        setSign(props.delayed ? '?' : props.result === 0 ? -1 : props.result === 5 && props.m1delayed === false ? '-1' : props.result === 5 && props.m1delayed === true ? '+1' : props.result);
+        setSign(props.delayed ? '?' : props.result === 0 ? "0" : props.result);
         if(props.various !== false && props.various !== 'newtype'){
             switch(props.various){
                 case 'golden':
@@ -54,7 +54,7 @@ const DiceNoon = (props) => {
 
     if(props.double){
         return (
-            <div className={['status_bar', props.meter > 2.2 ? 'blue_status' : props.meter < 2.0 ? 'red_status' : 'yellow_status'].join(' ')}>
+            <div className={['status_bar', props.meter > 2.0 ? 'blue_status' : props.meter < 1.0 ? 'red_status' : 'yellow_status'].join(' ')}>
                 {sign_number || '?'}
                 &nbsp;&nbsp;
                 {double_number || '?'}
@@ -62,13 +62,13 @@ const DiceNoon = (props) => {
         );
     } else if(props.various !== false) {
         return (
-            <div className={['status_bar', props.meter > 2.2 ? 'blue_status' : props.meter < 2.0 ? 'red_status' : 'yellow_status'].join(' ')}>
+            <div className={['status_bar', props.meter > 2.0 ? 'blue_status' : props.meter < 1.0 ? 'red_status' : 'yellow_status'].join(' ')}>
                 {sign_text || '??'}
             </div>
         );
     } else {
         return (
-            <div className={['status_bar', props.meter > 2.2 ? 'blue_status' : props.meter < 2.0 ? 'red_status' : 'yellow_status'].join(' ')}>
+            <div className={['status_bar', props.meter > 2.2 ? 'blue_status' : props.meter < 1.0 ? 'red_status' : 'yellow_status'].join(' ')}>
                 {sign_number || '?'}
             </div>
         );

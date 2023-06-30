@@ -7,7 +7,7 @@ const NewDoubleDice = (props) => {
     const dice_div = () => {
         const dice_lego = [];
         for (let i = 0; i < 6; i++){
-            var j = i%3 === 0 ? 'zero' : i%3;
+            var j = i%3;
             dice_lego.push(
                 <div key={i} id={'dice_'+i} className='dice_face'>
                     <img src={'./the_dice/num_'+j+'.png'} alt="Dice"></img>

@@ -32,7 +32,7 @@ const DiceMeter = (props) => {
             </div>
             <div className='meter_result'>
                 <div className='result_title'>현재 주사위는</div>
-                <div className='result_desc'>{dicemeter < 2.0 ? <span className='red_desc'>억까</span> : dicemeter > 2.2 ? <span className='blue_desc'>억빠</span> : <span>정속 주행</span>} 중...</div>
+                <div className='result_desc'>{dicemeter < 1.0 ? <span className='red_desc'>억까</span> : dicemeter > 2.0 ? <span className='blue_desc'>억빠</span> : <span>정속 주행</span>} 중...</div>
             </div>
         </div>
     );

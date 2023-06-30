@@ -35,9 +35,10 @@ const Dice = (props) => {
         const dice_lego = [];
         const vv_id = v_id();
         for (let i = 0; i < 6; i++){
+            var j = i%3;
             dice_lego.push(
                 <div key={i} id={'dice_'+i} className='dice_face'>
-                    {context.state.various === false ? <img key={'dice_'+i} src={'./the_dice/num_'+i+'.png'} alt="Dice"></img> : <img key={'dice_'+i} src={dicedata.dice[vv_id].files[i]} alt="Dice"></img>}
+                    {context.state.various === false ? <img key={'dice_'+i} src={'./the_dice/num_'+j+'.png'} alt="Dice"></img> : <img key={'dice_'+i} src={dicedata.dice[vv_id].files[i]} alt="Dice"></img>}
                 </div>
             )
         }
