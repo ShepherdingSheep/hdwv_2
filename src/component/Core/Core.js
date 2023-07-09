@@ -116,7 +116,7 @@ const Core = () => {
         context.actions.setStart(false);
         setRoll(true);
         setConfirm(false);
-        do{lotto = math.randomInt(0, 6);}while(lotto === diceLog[diceLog.length-1]);
+        lotto = math.randomInt(0, 6);
         if(context.state.double){
             lotto = math.randomInt(0, 6);
             setDoubleResult(lotto);
