@@ -5,11 +5,11 @@ article.core{
 
 .core_status{
     height: 10%;
-    padding-bottom: 4%;
+    padding-top: 4%;
 }
 
 .core_dice, .core_dicelist{
-    height: 40%;
+    height: 50%;
     min-height: 308.5px;
 }
 

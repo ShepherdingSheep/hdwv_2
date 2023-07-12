@@ -1,27 +1,27 @@
 #dice_d1{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     position: relative;
-    top: calc(50% - 50px);
-    left: calc(50% - 130px);
+    top: calc(50% - 115px);
+    left: calc(50% - 120px);
     transform-style: preserve-3d;
 }
 
 #dice_d2{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     position: relative;
-    top: calc(50% - 150px);
-    left: calc(50% + 35px);
+    top: calc(50% - 115px);
+    left: calc(50%);
     transform-style: preserve-3d;
 }
 
 .dice_d > .dice_face{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     position: absolute;
     text-align: center;
-    line-height: 100px;
+    line-height: 120px;
     font-size: 70pt;
     background-image: url('../../../public/the_dice/box_new.png');
     background-size: cover;
@@ -29,6 +29,6 @@
 }
 
 .dice_d > .dice_face > img{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 }
