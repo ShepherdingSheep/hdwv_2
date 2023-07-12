@@ -14,9 +14,9 @@ export const ModeContext = createContext({
 });
 
 const ModeManager = ({children}) => {
-  const [double, setDouble] = useState(false);
+  const [double, setDouble] = useState(true);
   const [start, setStart] = useState(true);
-  const [various, setVarious] = useState(false);
+  const [various, setVarious] = useState("newtype");
   const [visible, setVisible] = useState(false);
   const [result, setResult] = useState(-1);
 
