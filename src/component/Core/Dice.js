@@ -8,24 +8,28 @@ const Dice = (props) => {
     const context = useContext(ModeContext);
 
     const v_id = () => {switch(context.state.various){
-            case 'golden':
+            case 'odd':
                 return 0;
-            case 'slow':
+            case 'even':
                 return 1;
-            case 'fast':
+            case 'golden':
                 return 2;
-            case 'back':
+            case 'magic':
                 return 3;
-            case 'joker':
+            case 'slow':
                 return 4;
-            case 'edge':
+            case 'fast':
                 return 5;
-            case 'shield':
+            case 'back':
                 return 6;
-            case 'dual':
+            case 'joker':
                 return 7;
-            case 'molu':
+            case 'edge':
                 return 8;
+            case 'shield':
+                return 9;
+            case 'dual':
+                return 10;
             default:
                 return 0;
         }
@@ -35,10 +39,9 @@ const Dice = (props) => {
         const dice_lego = [];
         const vv_id = v_id();
         for (let i = 0; i < 6; i++){
-            var j = i%3;
             dice_lego.push(
                 <div key={i} id={'dice_'+i} className='dice_face'>
-                    {context.state.various === false ? <img key={'dice_'+i} src={'./the_dice/num_'+j+'.png'} alt="Dice"></img> : <img key={'dice_'+i} src={dicedata.dice[vv_id].files[i]} alt="Dice"></img>}
+                    {context.state.various === false ? <img key={'dice_'+i} src={'./the_dice/num_'+i+'.png'} alt="Dice"></img> : <img key={'dice_'+i} src={dicedata.dice[vv_id].files[i]} alt="Dice"></img>}
                 </div>
             )
         }

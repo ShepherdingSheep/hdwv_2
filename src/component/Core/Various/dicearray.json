@@ -1,6 +1,24 @@
 {"dice" : [
     {
         "id": 0,
+        "name": "odd",
+        "kr_name": "홀수 주사위",
+        "number": [-1, 1, 1, 3, 3],
+        "number_files": ["./the_dice/num_0.png", "./the_dice/num_1.png", "./the_dice/num_1.png", "./the_dice/num_3.png", "./the_dice/num_3.png"],
+        "files": ["./the_dice/num_0.png", "./the_dice/num_1.png", "./the_dice/num_1.png", "./the_dice/num_3.png", "./the_dice/num_3.png", "./the_dice/num_0.png"],
+        "preview": "./the_dice/multi_dice/dice_image/odd_dice.png"
+    },
+    {
+        "id": 1,
+        "name": "even",
+        "kr_name": "짝수 주사위",
+        "number": [-2, "0", 2, 2, 4],
+        "number_files": ["./the_dice/num_backdouble.png", "./the_dice/num_zero.png", "./the_dice/num_2.png", "./the_dice/num_2.png", "./the_dice/num_4.png"],
+        "files": ["./the_dice/num_backdouble.png", "./the_dice/num_zero.png", "./the_dice/num_2.png", "./the_dice/num_2.png", "./the_dice/num_4.png", "./the_dice/num_backdouble.png"],
+        "preview": "./the_dice/multi_dice/dice_image/even_dice.png"
+    },
+    {
+        "id": 2,
         "name": "golden",
         "kr_name": "황금열쇠 주사위",
         "number": ["후퇴", "돌격", "후퇴", "돌격"],
@@ -9,16 +27,25 @@
         "preview": "./the_dice/multi_dice/dice_image/golden_dice.png"
     },
     {
-        "id": 1,
+        "id": 3,
+        "name": "magic",
+        "kr_name": "내맘대로 주사위",
+        "number": ["트하싶", "뱅하싶", "트하싶", "뱅하싶"],
+        "number_files": ["./the_dice/multi_dice/dice_number/daruma_tsu.png", "./the_dice/multi_dice/dice_number/daruma_pyun.png", "./the_dice/multi_dice/dice_number/daruma_tsu.png", "./the_dice/multi_dice/dice_number/daruma_pyun.png"],
+        "files": ["./the_dice/multi_dice/dice_number/daruma_tsu.png", "./the_dice/multi_dice/dice_number/daruma_pyun.png", "./the_dice/multi_dice/dice_number/daruma_tsu.png", "./the_dice/multi_dice/dice_number/daruma_pyun.png", "./the_dice/multi_dice/dice_number/daruma_tsu.png", "./the_dice/multi_dice/dice_number/daruma_pyun.png"],
+        "preview": "./the_dice/multi_dice/dice_image/daruma_dice.png"
+    },
+    {
+        "id": 4,
         "name": "slow",
         "kr_name": "저속 주사위",
-        "number": ["0", "0", 1, 1, 2],
+        "number": [-1, -1, 1, 1, 2],
         "number_files": ["./the_dice/num_0.png", "./the_dice/num_0.png", "./the_dice/num_1.png", "./the_dice/num_1.png", "./the_dice/num_2.png"],
         "files": ["./the_dice/num_0.png", "./the_dice/num_0.png", "./the_dice/num_1.png", "./the_dice/num_1.png", "./the_dice/num_2.png", "./the_dice/num_2.png"],
         "preview": "./the_dice/multi_dice/dice_image/slow_dice.png"
     },
     {
-        "id": 2,
+        "id": 5,
         "name": "fast",
         "kr_name": "고속 주사위",
         "number": [2, 3, 3, 4, 4],
@@ -27,25 +54,25 @@
         "preview": "./the_dice/multi_dice/dice_image/fast_dice.png"
     },
     {
-        "id": 3,
+        "id": 6,
         "name": "back",
         "kr_name": "후진 주사위",
         "number": [-4, -3, -2, -1, 1],
-        "number_files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backtriple.png", "./the_dice/num_backdouble.png", "./the_dice/num_back.png", "./the_dice/num_1.png"],
-        "files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backtriple.png", "./the_dice/num_backdouble.png", "./the_dice/num_back.png", "./the_dice/num_1.png", "./the_dice/num_back.png"],
+        "number_files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backtriple.png", "./the_dice/num_backdouble.png", "./the_dice/num_0.png", "./the_dice/num_1.png"],
+        "files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backtriple.png", "./the_dice/num_backdouble.png", "./the_dice/num_0.png", "./the_dice/num_1.png", "./the_dice/num_0.png"],
         "preview": "./the_dice/multi_dice/dice_image/back_dice.png"
     },
     {
-        "id": 4,
+        "id": 7,
         "name": "joker",
         "kr_name": "조커! 주사위",
-        "number": [-4, -4, "0", 4, 4],
-        "number_files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backquaduruple.png", "./the_dice/num_0.png", "./the_dice/num_4.png", "./the_dice/num_4.png"],
-        "files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backquaduruple.png", "./the_dice/num_0.png", "./the_dice/num_4.png", "./the_dice/num_4.png", "./the_dice/num_backquaduruple.png"],
+        "number": [-4, -4, 4, 4, 4],
+        "number_files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backquaduruple.png", "./the_dice/num_4.png", "./the_dice/num_4.png", "./the_dice/num_4.png"],
+        "files": ["./the_dice/num_backquaduruple.png", "./the_dice/num_backquaduruple.png", "./the_dice/num_4.png", "./the_dice/num_4.png", "./the_dice/num_4.png", "./the_dice/num_backquaduruple.png"],
         "preview": "./the_dice/multi_dice/dice_image/joker_dice.png"
     },
     {
-        "id": 5,
+        "id": 8,
         "name": "edge",
         "kr_name": "무인도 주사위",
         "number": ["↙", "↗", "↖", "↙", "↗"],
@@ -54,7 +81,7 @@
         "preview": "./the_dice/multi_dice/dice_image/edge_dice.png"
     },
     {
-        "id": 6,
+        "id": 9,
         "name": "shield",
         "kr_name": "전진 주사위",
         "number": [1, 2, 3, 4],
@@ -63,7 +90,7 @@
         "preview": "./the_dice/multi_dice/dice_image/shield_dice.png"
     },
     {
-        "id": 7,
+        "id": 10,
         "name": "dual",
         "kr_name": "막고라 주사위",
         "number": ["디맥", "투온", "식스타", "아르케아"],
@@ -72,7 +99,7 @@
         "preview": "./the_dice/multi_dice/dice_image/dual_dice.png"
     },
     {
-        "id": 8,
+        "id": 11,
         "name": "molu",
         "kr_name": "몰?루 주사위",
         "number": [0, 0, 0, 0, 0],

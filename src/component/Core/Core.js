@@ -3,7 +3,6 @@ import './Core.css';
 import DiceNoon from './Dicenoon'
 import Dice from './Dice'
 import DoubleDice from './DoubleDice'
-import NewDoubleDice from './NewDoubleDice'
 import Menu from './Menu'
 import DiceList from './Various/DiceList'
 import DiceShow from './Various/DiceShow'
@@ -112,21 +111,27 @@ const Core = () => {
     const roll = (e) => {
         toggle_a();
         let lotto;
+        const nugul = math.pickRandom([true, false]);
         e.preventDefault();
-        context.actions.setStart(false);
         setRoll(true);
         setConfirm(false);
-        lotto = math.randomInt(0, 6);
+        do{lotto = math.randomInt(0, 5);}while(lotto === diceLog[diceLog.length-1]);
+        if(lotto === 0 && nugul === true){lotto = 5};
+        if(context.state.start){
+            context.actions.setStart(false);
+            lotto = math.randomInt(1, 5);
+            setResult(lotto);
+        }
         if(context.state.double){
-            lotto = math.randomInt(0, 6);
+            lotto = math.randomInt(0, 5);
             setDoubleResult(lotto);
-            lotto = math.randomInt(0, 6);
+            lotto = math.randomInt(0, 5);
             setResult(lotto);
         }
         if(context.state.various === 'golden' || context.state.various === 'magic' || context.state.various === 'dual'){
             lotto = math.randomInt(0, 4);
             setVResult(lotto);
-        }else if(context.state.various !== false && context.state.various !== 'newtype'){
+        }else if(context.state.various !== false){
             lotto = math.randomInt(0, 5);
             setVResult(lotto);
         }
@@ -135,9 +140,9 @@ const Core = () => {
             setVResult(lotto);
         }
         if(context.state.double === false && context.state.various === false){
-            setResult(lotto%3);
+            setResult(lotto);
             setLog([...diceLog, lotto]);
-            context.actions.setResult(lotto%3);
+            context.actions.setResult(lotto);
         }
     }
 
@@ -153,6 +158,9 @@ const Core = () => {
     if(context.state.visible === true){
         return(
             <article className='core'>
+                <div className='core_messagebox'>
+                    <RInfo />
+                </div>
                 <div className='core_meter'>
                 <DiceStat ResultArray={[ResultBack.current, ResultNugul.current, ResultOne.current, ResultTwo.current, ResultThree.current, ResultFour.current]} />
                 <DiceMeter ResultArray={[ResultBack.current, ResultNugul.current, ResultOne.current, ResultTwo.current, ResultThree.current, ResultFour.current]} upMeter={meterUpdateHandler} />
@@ -165,11 +173,17 @@ const Core = () => {
     }else if(context.state.various !== true){
         return(
             <article className='core'>
-                <div className='core_status'>
-                    {context.state.various !== false && context.state.various !== 'newtype' ? <DiceNoon result={variousResult} doubleresult={doubleResult} delayed={isRoll} m1delayed={m1confirm} various={context.state.various} double={context.state.double} meter={meter} /> : <DiceNoon result={diceResult} doubleresult={doubleResult} delayed={isRoll} m1delayed={m1confirm} various={context.state.various} double={context.state.double} meter={meter} />}
+                <div className='core_messagebox'>
+                    <RInfo />
                 </div>
-                <div className={['core_dice', meter > 2.0 ? 'blue_dice' : meter < 1.0 ? 'red_dice' : 'yellow_dice'].join(' ')} onClick={isRoll ? undefined : roll}>
-                    {context.state.double ? context.state.various === 'newtype' ? <NewDoubleDice rolling={isRoll} result_one={diceResult} result_two={doubleResult}/> : <DoubleDice rolling={isRoll} result_one={diceResult} result_two={doubleResult}/> : context.state.various !== false ? <Dice rolling={isRoll} various={context.state.various} result={variousResult} meter={meter} /> : <Dice rolling={isRoll} result={diceResult} meter={meter} />}
+                <div className={['core_dice', meter > 2.3 ? 'blue_dice' : meter < 1.9 ? 'red_dice' : 'yellow_dice'].join(' ')} onClick={isRoll ? undefined : roll}>
+                    {context.state.start ? <Dice rolling={isRoll} result={diceResult} meter={meter}/> : context.state.double ? <DoubleDice rolling={isRoll} result_one={diceResult} result_two={doubleResult}/> : context.state.various !== false ? <Dice rolling={isRoll} various={context.state.various} result={variousResult} meter={meter} /> : <Dice rolling={isRoll} result={diceResult} meter={meter} />}
+                </div>
+                <div className='core_status'>
+                    {context.state.various !== false ? <DiceNoon result={variousResult} doubleresult={doubleResult} delayed={isRoll} m1delayed={m1confirm} various={context.state.various} double={context.state.double} meter={meter} /> : <DiceNoon result={diceResult} doubleresult={doubleResult} delayed={isRoll} m1delayed={m1confirm} various={context.state.various} double={context.state.double} meter={meter} />}
+                </div>
+                <div className='core_status'>
+                    {context.state.various !== false ? <DiceNoon result={variousResult} doubleresult={doubleResult} delayed={isRoll} m1delayed={m1confirm} various={context.state.various} double={context.state.double} meter={meter} /> : <DiceNoon result={diceResult} doubleresult={doubleResult} delayed={isRoll} m1delayed={m1confirm} various={context.state.various} double={context.state.double} meter={meter} />}
                 </div>
                 <div className='core_button'>
                     <Menu />
@@ -183,6 +197,9 @@ const Core = () => {
         return(
             <ListManager>
                 <article className='core'>
+                    <div className='core_messagebox'>
+                        <RInfo />
+                    </div>
                     <div className='core_status'>
                         <DiceShow />
                     </div>
